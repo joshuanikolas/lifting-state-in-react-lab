@@ -1,11 +1,12 @@
 //import './App.css'
+import React from 'react'
 
 const IngredientList = (props) => {
     return ( 
     <ul>
-        {props.openIngredients.map((openIngredient, index) => (
-            <li key={index} style={{ backgroundColor: openIngredient.color }}>{openIngredient.name}
-            <button onClick={() => props.addToBurger(openIngredient)}>+</button>
+        {props.availableIngredients.map((openIngredient, index) => (
+            <li key={index} style={{ backgroundColor: availableIngredient.color }}>{availableIngredient.name}
+            <button onClick={() => props.addToBurger(availableIngredient)}>+</button>
             </li>
         ))}
     </ul>
